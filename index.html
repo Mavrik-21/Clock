@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="icon" href="img/icon1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Shizuru&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: blueviolet;
+        }
+
+        .container1 {
+            display: inline-flex;
+            /* justify-content: center; */
+        }
+
+        h1 {
+            padding-left:420px ;
+            font-size: 88px;
+            font-family: 'Shizuru', cursive;
+        }
+
+        .container2 {
+            display: flex;
+            margin: 50px 380px;
+            /* background-color: darkgray; */
+            width: 50vw;
+            min-height: calc(100vh - 128px - 350px);
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 160px 0px 0px 0px;
+        }
+
+        h3 {
+            padding: 35px;
+            font-family: 'Shizuru', cursive;
+            color:white;
+            font-weight: bolder;
+            font-size: 30px;
+        }
+
+        span {
+            padding: 35px 10px;
+            color:white;
+            font-family: 'Shizuru', cursive;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+
+        img{
+            animation-name: rotation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            padding: 10px 20px;
+        }
+
+        @keyframes rotation{
+            from{
+                rotate:0deg;
+            }
+            to{
+                rotate:360deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container1">
+        <img src="img/logo.png" width="180px" alt="logo">
+        <h1>Clock</h1>
+    </div>
+    <div class="container2">
+        <h3>Current Time is : </h3>
+        <span id="show"></span>
+    </div>
+</body>
+<footer>
+    <div class="footer">
+        copyright &copy; by Sourabh Bharti.
+    </div>
+</footer>
+<script>
+    let date;
+    let time;
+    let d;
+
+
+    dt = () => {
+        d = new Date();
+        date = d.toDateString()
+        time = d.getHours() + " : " + d.getMinutes() + " : " + d.getSeconds();
+        document.getElementById('show').innerHTML = time + "<pre>   on  </pre> " + date;
+    }
+
+    setInterval(dt, 1000);
+
+
+</script>
+
+</html>
