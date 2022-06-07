@@ -1,0 +1,28 @@
+
+body{
+    background-color:blueviolet;
+    text-align: center;
+}
+.container1{
+    display:inline-block;
+    font-family: 'Architects Daughter', cursive;
+    /* font-family: 'Ultra', serif; */
+    font-size: 3rem;
+    font-weight: bolder;
+}
+.container2{
+    /* font-family: 'Architects Daughter', cursive; */
+    font-family: 'Ultra', serif;
+    font-size: 2rem;
+}
+footer{
+    text-align: center;
+}
+.footer{
+    font-family: 'Architects Daughter', cursive;
+    /* font-family: 'Ultra', serif; */
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom:1em;
+}
