@@ -11,11 +11,3 @@ dt = () => {
 }
 
 setInterval(dt, 1000);
-
-$(document).ready(function(){
-    $("h3").on({
-        mouseenter: function(){
-        $(this).css("color","white");
-    }
-    });
-});
