@@ -7,53 +7,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/icon1.png">
-    <link
+    <!-- <link
         href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Press+Start+2P&family=Shizuru&family=Titan+One&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Clock</title>
     <style>
         body {
-            background-color: black;
+            background-color: rgb(41,40,40);
             text-align: center;
-            color: yellow;
         }
 
         .container1 {
             display: inline-block;
-            font-family: 'Architects Daughter', cursive;
+            color:white;
+            /* font-family: 'Architects Daughter', cursive; */
+            font-family: 'Poppins', sans-serif;
             font-size: 3rem;
             font-weight: bolder;
         }
 
         .container2 {
-            font-family: 'Ultra', serif;
+            /* font-family: 'Ultra', serif; */
+            color:blueviolet;
+            font-family: 'Ubuntu', sans-serif;
             font-size: 2rem;
+            transition: all 0.3s ease;
         }
 
         .container2:hover {
-            color: white;
+            color:mediumorchid ;
             font-size: 2.5em;
             ;
         }
 
-        footer {
-            text-align: center;
-        }
-
+        
+        
         .footer {
-            font-family: 'Architects Daughter', cursive;
+            /* font-family: 'Architects Daughter', cursive; */
+            padding: 20px 23px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
             text-align: center;
             width: 100%;
             position: fixed;
-            bottom: 1em;
+            bottom: 0px;
+
+        }
+        footer .footer .name,.ck{
+            color:crimson;
+        }
+        footer {
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
     <div class="container1">
-        <h1>Clock</h1>
+        <h1>Clo<span class="ck">ck</span></h1>
     </div>
     <div class="container2">
         <h3>Current Time is -- <span id="show"></span></h3>
@@ -61,7 +74,7 @@
 </body>
 <footer>
     <div class="footer">
-        Copyright &copy; by Sourabh Bharti.
+        Copyright &copy; by <span class="name">Sourabh</span>, 2021. 
     </div>
 </footer>
 <script src="logic.js"></script>
